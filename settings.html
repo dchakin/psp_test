@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PSP IN test</title>
+</head>
+
+<body bgcolor="grey">
+    <label>app link:</label>
+    <input type="text" id="app_link" name="app_link" value="http://localhost:5173/#/">
+    <label>test link:</label>
+    <input type="text" id="test_link" name="test_link" size="50"
+        value="?cus=token">
+    <button onclick="runApp()">run app</button>
+    <script>
+        const runApp = () => {
+const testLink = document.querySelector('#test_link').value
+const appLink = document.querySelector('#app_link').value
+const fullLink = `${appLink}${testLink}`
+window.open(fullLink, '_blank');
+        }
+    </script>
+</body>
+
+</html>
